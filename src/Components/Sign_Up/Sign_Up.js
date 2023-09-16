@@ -56,8 +56,8 @@ const Sign_Up = () => {
         <div className="container" style={{marginTop:'5%'}}>
         <div className="signup-grid">
         <div className="signup-form">
+            <br /><br />
          <form method="POST" onSubmit={register}>
-            <br />
            <div className="form-group">
                 <label htmlFor="email">Email</label>
                  <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
@@ -78,7 +78,7 @@ const Sign_Up = () => {
 
             <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input value={name} onChange={(e) => setPassword(e.target.value)} type="password" name="password" id="password" className="form-control" placeholder="Enter your phone" aria-describedby="helpId" />
+                <input value={name} onChange={(e) => setPassword(e.target.value)} type="password" name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
                 {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>}
             </div>
 

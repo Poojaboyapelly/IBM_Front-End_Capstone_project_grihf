@@ -77,6 +77,11 @@ const Navbar = () => {
           </>
         ) : (
           <>
+          <li className="link">
+            <Link to="/InstantConsultation">
+              <button className="btn1">Instant Consultation</button>
+            </Link>
+          </li>
             <li className="link">
               <Link to="/Sign_Up">
                 <button className="btn1">Sign Up</button>
