@@ -20,6 +20,7 @@ import Login from './Components/Login/Login';
 import Sign_Up from './Components/Sign_Up/Sign_Up';
 //import InstantConsultationBooking from './Components/InstantConsultation/InstantConsultationBooking';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';  
+import BookingConsultation from './Components/BookingConsultation';  
 import Navbar from './Components/Navbar/Navbar';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Route path="/Login" element={<Login/>}/>
               <Route path="/Sign_Up" element={<Sign_Up/>}/>
               <Route path="/InstantConsultation" element={<InstantConsultation/>} />
+              <Route path="/BookingConsultation" element={<BookingConsultation/>} />
               </Routes>
             
         </BrowserRouter>
