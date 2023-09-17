@@ -1,6 +1,6 @@
 ## About The Project
 
-This Medical Appointment Booking website is to be edited by andre1melo.<br />
+This Medical Appointment Booking capstone project is to be edited by andre1melo.<br />
 When finished it will be evaluated by Coursera as the Capstone project of the IBM Front-End Development course.
 
 
