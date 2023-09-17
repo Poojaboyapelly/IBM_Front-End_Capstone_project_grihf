@@ -75,11 +75,11 @@ export default function Login() {
           Are you a new member?{" "}
           <span>
             <Link to="/signup" style={{ color: "#2190ff" }}>
-              Signup Here
+              Sign Up Here
             </Link>
           </span>
         </div>
-
+        <br />
         <div className="login-form">
           <form onSubmit={submitHandler}>
             <div className="login-form-group">
@@ -125,20 +125,14 @@ export default function Login() {
             </div>
 
             <div className="btn-group">
-              <button
-                type="submit"
-                className="btn btn-primary mb-2 mr-1 waves-effect waves-light"
-              >
+              <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
                 Login
               </button>
-              <button
-                type="reset"
-                className="btn btn-danger mb-2 waves-effect waves-light"
-              >
+              <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">
                 Reset
               </button>
             </div>
-
+            <br />
             <div className="login-text">Forgot Password?</div>
           </form>
         </div>

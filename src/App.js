@@ -1,13 +1,13 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import BookingConsultation from "./Components/BookingConsultation";
-//import ReviewForm from "./Components/ReviewForm/ReviewForm"
+import ReviewForm from "./Components/ReviewForm/ReviewForm"
 import Layout from "./Components/Landing_Page/Landing_Page";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Sign_Up/Sign_Up";
 import Root from "./Page/Root";
-//import ProfileCard from "./Components/ProfileCard/ProfileCard"
-//import ReportsLayout from "./Components/ReportsLayout/ReportsLayout"
+import ProfileCard from "./Components/ProfileCard/ProfileCard"
+import ReportsLayout from "./Components/ReportsLayout/ReportsLayout"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
           path: "instant-consultation",
           element: <BookingConsultation />,
         },
-        /*{
+        {
           path: "reviews",
           element: <ReviewForm />
         },
@@ -40,7 +40,7 @@ export default function App() {
         {
             path: "report",
             element: <ReportsLayout />
-          },*/
+          },
       ],
     },
   ]);

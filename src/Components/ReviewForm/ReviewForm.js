@@ -27,7 +27,7 @@ export default function ReviewForm() {
         <tbody>
           <tr>
             <td>1</td>
-            <td>Dr. john Doe</td>
+            <td>Dr. Michael Loe</td>
             <td>Cardiology</td>
             <td>
               {<GiveReviews onHandleReview={handleReview} />}
@@ -36,7 +36,7 @@ export default function ReviewForm() {
           </tr>
           <tr>
             <td>2</td>
-            <td>Dr. Jane Smith</td>
+            <td>Dr. Paula Boe</td>
             <td>Dermatology</td>
             <td>
               {/* {<GiveReviews onHandleReview={handleReview} />} */}

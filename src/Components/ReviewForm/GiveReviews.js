@@ -1,7 +1,7 @@
 import Popup from "reactjs-popup";
 import { Button } from 'react-bootstrap';
 import React, { useState } from 'react';
-import Star from './Star'; // Import komponen bintang
+import Star from './Star'; // Import star component
 import './GiveReviews.css';
 
 function ReviewForm() {
