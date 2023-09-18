@@ -74,13 +74,13 @@ export default function Navbar() {
           </li>
           <li className="link">
             {/* <Link to="search/doctors">Appointments</Link> */}
-            <Link to="instant-consultation">Appointments</Link>
+            <Link to="BookingConsultation">Appointments</Link>
           </li>
           <li className="link">
             <Link to="healthblog">Health Blog</Link>
           </li>
           <li className="link">
-            <Link to="reviews">Reviews</Link>
+            <Link to="ReviewForm">Reviews</Link>
           </li>
           {isLoggedIn ? (
             <>
@@ -88,10 +88,10 @@ export default function Navbar() {
                 {`Welcome, ${getUserName()}`}
                 <ul className='dropdown-menu'>
                   <li>
-                    <Link to='profile'>Your Profile</Link>
+                    <Link to='ProfileCard'>Your Profile</Link>
                   </li>
                   <li>
-                    <Link to='report'>Your Reports</Link>
+                    <Link to='ReportsLayout'>Your Reports</Link>
                   </li>
                 </ul>
               </li>

@@ -19,10 +19,10 @@ const DoctorCard = ({ name, speciality, experience, ratings }) => {
     );
     setAppointments(updatedAppointments);
 
-    // Hapus data appointment dari localStorage
+    // Delete appointment data from localStorage
     localStorage.removeItem('appointmentData');
 
-    // Memicu perubahan di komponen Notification dengan event storage
+    // Trigger changes in the Notification component with storage events
     window.dispatchEvent(new Event("storage"));
   };
 

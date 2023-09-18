@@ -1,15 +1,44 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import BookingConsultation from "./Components/BookingConsultation";
+//import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReviewForm from "./Components/ReviewForm/ReviewForm"
 import Layout from "./Components/Landing_Page/Landing_Page";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Sign_Up/Sign_Up";
-import Root from "./Page/Root";
 import ProfileCard from "./Components/ProfileCard/ProfileCard"
 import ReportsLayout from "./Components/ReportsLayout/ReportsLayout"
+//import InstantConsultation from './Components/InstantConsultation/InstantConsultation';  
+import BookingConsultation from './Components/BookingConsultation';  
+import Navbar from './Components/Navbar/Navbar';
+import Notification from './Components/Notification/Notification';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+function App() {
+
+    return (
+      <div className="App">
+          <BrowserRouter>
+            <Navbar/>
+                <Routes>
+                <Route path="/" element={<Layout/>}/>
+                <Route path="/Login" element={<Login/>}/>
+                <Route path="/SignUp" element={<SignUp/>}/>
+                {/*<Route path="/InstantConsultation" element={<BookingConsultation/>} />*/}
+                <Route path="/BookingConsultation" element={<BookingConsultation/>} />
+                <Route path="/ReviewForm" element={<ReviewForm/>}/>
+                <Route path="/ProfileCard" element={<ProfileCard/>}/>
+                <Route path="/ReportsLayout" element={<ReportsLayout/>}/>
+                </Routes>
+           <Notification/>
+          </BrowserRouter>
+         
+      </div>
+    );
+  }
+  
+  export default App;
+/*
 export default function App() {
   const routers = createBrowserRouter([
     {
@@ -47,6 +76,8 @@ export default function App() {
 
   return <RouterProvider router={routers} />;
 }
+*/
+
 
 /*import logo from './logo.svg';
 import './App.css';
