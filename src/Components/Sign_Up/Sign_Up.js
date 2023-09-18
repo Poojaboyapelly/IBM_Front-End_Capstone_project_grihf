@@ -104,6 +104,7 @@ export default function Signup() {
         </div>
         <div className="signup-form">
           <form method="POST" onSubmit={submitHandler}>
+
             <div className="signup-form-group">
               <label htmlFor="role">Role</label>
               <select
@@ -118,6 +119,7 @@ export default function Signup() {
                 <option value="Patient">Patient</option>
               </select>
             </div>
+
             <div className="signup-form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -133,6 +135,7 @@ export default function Signup() {
                 aria-describedby="helpId"
               />
             </div>
+
             <div className="signup-form-group">
               <label htmlFor="email">Email</label>
               <input
@@ -148,6 +151,7 @@ export default function Signup() {
               />
               {showerr && <div className="err">{showerr}</div>}
             </div>
+
             <div className="signup-form-group">
               <label htmlFor="phone">Phone</label>
               <input
@@ -165,6 +169,7 @@ export default function Signup() {
               />
               {errorNumber && <div className="err">{errorNumber}</div>}
             </div>
+            
             <div className="signup-form-group">
               <label htmlFor="password">Password</label>
               <div className="password-input-wrapper">
@@ -194,13 +199,16 @@ export default function Signup() {
               </div>
             </div>
 
-            <div className="btn-group">
+            <div className="btn-subgroup">
               <button
                 type="submit"
                 className="btn btn-primary mb-2 mr-1 waves-effect waves-light"
               >
-                Submit
+                Sign Up
               </button>
+            </div>
+            
+            <div className="btn-subgroup">
               <button
                 type="reset"
                 onClick={resetHandler}
@@ -209,6 +217,7 @@ export default function Signup() {
                 Reset
               </button>
             </div>
+
           </form>
         </div>
       </div>

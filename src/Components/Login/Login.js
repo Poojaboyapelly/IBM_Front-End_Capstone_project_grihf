@@ -124,10 +124,13 @@ export default function Login() {
               </div>
             </div>
 
-            <div className="btn-group">
+            <div className="btn-subgroup">
               <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
                 Login
               </button>
+            </div>
+            
+            <div className="btn-subgroup">
               <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">
                 Reset
               </button>
