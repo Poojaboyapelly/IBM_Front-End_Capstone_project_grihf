@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Star from './Star'; // Import star component
 import './GiveReviews.css';
 
-function ReviewForm() {
+function GiveReviews() {
   const [showForm, setShowForm] = useState(false);
   const [showWarning, setShowWarning] = useState(false);
   const [formData, setFormData] = useState({ name: '', review: '', rating: 0 });
@@ -84,4 +84,4 @@ function ReviewForm() {
   );
 }
 
-export default ReviewForm;
+export default GiveReviews;

@@ -1,6 +1,4 @@
 import React from "react";
-//import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReviewForm from "./Components/ReviewForm/ReviewForm"
 import Layout from "./Components/Landing_Page/Landing_Page";
@@ -38,45 +36,7 @@ function App() {
   }
   
   export default App;
-/*
-export default function App() {
-  const routers = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root />,
-      children: [
-        { index: true, element: <Layout /> },
-        {
-          path: "signup",
-          element: <SignUp />,
-        },
-        {
-          path: "login",
-          element: <Login />,
-        },
-        {
-          path: "instant-consultation",
-          element: <BookingConsultation />,
-        },
-        {
-          path: "reviews",
-          element: <ReviewForm />
-        },
-        {
-          path: "profile",
-          element: <ProfileCard />
-        },
-        {
-            path: "report",
-            element: <ReportsLayout />
-          },
-      ],
-    },
-  ]);
 
-  return <RouterProvider router={routers} />;
-}
-*/
 
 
 /*import logo from './logo.svg';
