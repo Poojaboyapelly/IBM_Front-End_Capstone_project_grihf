@@ -17,7 +17,7 @@ export default function ReportsLayout() {
   };
 
   const downloadReport = () => {
-    const reportUrl = '../../../public/patient_report.pdf';
+    const reportUrl = '../../../patient_report.pdf';
     
     const link = document.createElement('a');
     link.href = reportUrl;
