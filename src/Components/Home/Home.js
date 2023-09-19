@@ -16,6 +16,11 @@ const Healthblog = () => {
               Book an Appointment
             </button>
       </Link>
+      <Link to="../SelfCheckup">
+            <button type="button"  class="btn btn-primary btn-lg" className="button">
+              Self Checkup
+            </button>
+      </Link>
       <Link to="../Healthblog">
             <button type="button"  class="btn btn-primary btn-lg" className="button">
               Health Tips and Guidance
