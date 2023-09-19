@@ -31,10 +31,12 @@ const FindDoctorSearch = () => {
       <center>
         <h2>Find a doctor and Consult instantly</h2>
         <div>
-          <i
-            style={{ color: "#000000", fontSize: "20rem" }}
-            className="fa fa-user-md"
-          ></i>
+          {/*<i style={{ color: "#000000", fontSize: "20rem" }} className="fa fa-user-md" ></i>*/}
+          <img
+          class="mainimg"
+          src="https://img.freepik.com/free-vector/man-with-magnifying-glass-laptop-website-information_24877-53542.jpg?w=2000&t=st=1695138274~exp=1695138874~hmac=4572a2f00182c7c5d8ecb73a2255166a9024e6324f44e94623632ddbed9b7859"
+          alt=""
+        />
         </div>
         <div
           className="home-search-container"
