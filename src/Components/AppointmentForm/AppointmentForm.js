@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './AppointmentForm.css';
 
 const AppointmentForm = ({ onSubmit }) => {
   const [name, setName] = useState("");
@@ -32,6 +33,7 @@ const AppointmentForm = ({ onSubmit }) => {
   };
 
   return (
+    <section className="review-form">
     <form onSubmit={handleFormSubmit} className="appointment-form">
       <div className="form-group">
         <label htmlFor="name">Name:</label>
@@ -83,6 +85,7 @@ const AppointmentForm = ({ onSubmit }) => {
       </div>
       <button type="submit">Book Now</button>
     </form>
+    </section>
   );
 };
 

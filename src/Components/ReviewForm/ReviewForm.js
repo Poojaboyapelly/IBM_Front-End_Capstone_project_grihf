@@ -30,19 +30,28 @@ export default function ReviewForm() {
             <td>Dr. Michael Loe</td>
             <td>Cardiology</td>
             <td>
-              {<GiveReviews onHandleReview={handleReview} />}
+              {<GiveReviews />}
             </td>
-            <td>Great consultation</td>
+            <td></td>
           </tr>
           <tr>
             <td>2</td>
+            <td>Dr. Jason Lee</td>
+            <td>Orthopedy</td>
+            <td>
+              {<GiveReviews />}
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
             <td>Dr. Paula Boe</td>
             <td>Dermatology</td>
             <td>
               {/* {<GiveReviews onHandleReview={handleReview} />} */}
-              <Button variant="primary" size='sm'>Click Here</Button>
+              <Button variant="primary" disabled size ='sm'>Review Submitted</Button>
               </td>
-            <td></td>
+            <td>Great consultation</td>
           </tr>
         </tbody>
       </Table>

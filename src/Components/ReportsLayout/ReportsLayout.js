@@ -43,7 +43,7 @@ export default function ReportsLayout() {
         <tbody>
           <tr>
             <td>1</td>
-            <td>Dr. john Doe</td>
+            <td>Dr. John Doe</td>
             <td>Cardiology</td>
             <td>
                 <Button variant="primary" size='sm' onClick={openReportInNewTab}>View Report</Button>
@@ -54,13 +54,13 @@ export default function ReportsLayout() {
           </tr>
           <tr>
             <td>2</td>
-            <td>Dr. Jane Smith</td>
+            <td>Dr. Paula Boe</td>
             <td>Dermatology</td>
             <td>
-              <Button variant="primary" size='sm'>View Report</Button>
+              <Button variant="primary" disabled size='sm'>Report Unavailable</Button>
             </td>
             <td>
-                <Button variant="primary" size='sm'>Download Report</Button>
+                <Button variant="primary" disabled size='sm'>Download Unavailable</Button>
             </td>
           </tr>
         </tbody>

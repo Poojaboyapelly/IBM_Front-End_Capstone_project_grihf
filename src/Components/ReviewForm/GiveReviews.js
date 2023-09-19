@@ -11,6 +11,7 @@ function GiveReviews() {
 
   const handleButtonClick = () => {
     setShowForm(true);
+    console.log("ShowForm true");
   };
 
   const handleChange = (e) => {
@@ -52,7 +53,7 @@ function GiveReviews() {
 
   return (
     <div>
-      <Button variant="primary" disabled size='sm' onClick={handleButtonClick}>Click Here</Button>
+      <Button variant="primary" /*disabled size='sm'*/ onClick={handleButtonClick}>Click Here</Button>
 
       <Popup
         style={{ backgroundColor: "#FFFFFF" }}
@@ -60,6 +61,7 @@ function GiveReviews() {
         open={showForm}
         onClose={() => setShowForm(false)}
       >
+        <section className="review-form">
         <form onSubmit={handleSubmit}>
           <h2>Give Your Review</h2>
           {showWarning && <p className="warning">Please fill out all fields.</p>}
@@ -76,9 +78,10 @@ function GiveReviews() {
             <div className="rating">
               {renderStars()}
             </div>
-          </div>
+          </div>         
           <Button variant="primary" type="submit">Submit</Button>
         </form>
+        </section>
       </Popup>
     </div>
   );
