@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import { v4 as uuidv4 } from "uuid";
-import AppointmentFormIC from "../AppointmentFormIC/AppointmentFormIC";
+import AppointmentForm from "../AppointmentFormIC/AppointmentFormIC";
 import "./DoctorCardIC.css";
 
-const DoctorCardIC = ({
-  name,
-  speciality,
-  experience,
-  ratings,
-  profilePic,
-}) => {
+const DoctorCardIC = ({ name, speciality, experience, ratings }) => {
   const [showModal, setShowModal] = useState(false);
   const [appointments, setAppointments] = useState([]);
 
@@ -24,6 +18,12 @@ const DoctorCardIC = ({
       (appointment) => appointment.id !== appointmentId
     );
     setAppointments(updatedAppointments);
+
+    // Delete appointment data from localStorage
+    localStorage.removeItem('appointmentData');
+
+    // Trigger changes in the Notification component with storage events
+    window.dispatchEvent(new Event("storage"));
   };
 
   const handleFormSubmit = (appointmentData) => {
@@ -34,6 +34,18 @@ const DoctorCardIC = ({
     const updatedAppointments = [...appointments, newAppointment];
     setAppointments(updatedAppointments);
     setShowModal(false);
+
+    const doctorData = {
+        name,
+        speciality,
+        experience,
+        ratings
+    }
+
+    localStorage.setItem('doctorData', JSON.stringify(doctorData));
+    localStorage.setItem('appointmentData', JSON.stringify(newAppointment));
+
+    window.dispatchEvent(new Event("storage"));
   };
 
   return (
@@ -65,27 +77,26 @@ const DoctorCardIC = ({
       </div>
 
       <div className="doctor-card-options-container">
+        <button
+            className={`book-appointment-btn ${
+            appointments.length > 0 ? "cancel-appointment" : ""
+            }`}
+            onClick={handleBooking}
+        >
+            {appointments.length > 0 ? (
+            <div>Cancel Appointment</div>
+            ) : (
+            <div>Book Appointment</div>
+            )}
+            <div>No Booking Fee</div>
+        </button>
         <Popup
           style={{ backgroundColor: "#FFFFFF" }}
-          trigger={
-            <button
-              className={`book-appointment-btn ${
-                appointments.length > 0 ? "cancel-appointment" : ""
-              }`}
-            >
-              {appointments.length > 0 ? (
-                <div>Cancel Appointment</div>
-              ) : (
-                <div>Book Appointment</div>
-              )}
-              <div>No Booking Fee</div>
-            </button>
-          }
           modal
           open={showModal}
           onClose={() => setShowModal(false)}
         >
-          {(close) => (
+          {
             <div
               className="doctorbg"
               style={{ height: "100vh", overflow: "scroll" }}
@@ -138,14 +149,10 @@ const DoctorCardIC = ({
                   ))}
                 </>
               ) : (
-                <AppointmentFormIC
-                  doctorName={name}
-                  doctorSpeciality={speciality}
-                  onSubmit={handleFormSubmit}
-                />
+                <AppointmentForm onSubmit={handleFormSubmit} />
               )}
             </div>
-          )}
+          }
         </Popup>
       </div>
     </div>

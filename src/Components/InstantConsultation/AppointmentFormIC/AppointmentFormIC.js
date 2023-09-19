@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
+const AppointmentFormIC = ({ onSubmit }) => {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errorNumber, setErrorNumber] = useState("");
