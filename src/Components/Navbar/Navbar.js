@@ -70,14 +70,14 @@ export default function Navbar() {
         </div>
         <ul className={click ? "nav__links active" : "nav__links"}>
           <li className="link">
-            <Link to="/">Home</Link>
+            <Link to="Home">Home</Link>
           </li>
           <li className="link">
             {/* <Link to="search/doctors">Appointments</Link> */}
             <Link to="BookingConsultation">Appointments</Link>
           </li>
           <li className="link">
-            <Link to="healthblog">Health Blog</Link>
+            <Link to="Healthblog">Health Blog</Link>
           </li>
           <li className="link">
             <Link to="ReviewForm">Reviews</Link>

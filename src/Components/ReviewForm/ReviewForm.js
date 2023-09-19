@@ -32,19 +32,10 @@ export default function ReviewForm() {
             <td>
               {<GiveReviews onHandleReview={handleReview} />}
             </td>
-            <td>Review</td>
+            <td>Great consultation</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Dr. Jane Mitchel</td>
-            <td>Dermatologist</td>
-            <td>
-              {<GiveReviews onHandleReview={handleReview} />}
-            </td>
-            <td>Review</td>
-          </tr>
-          <tr>
-            <td>3</td>
             <td>Dr. Paula Boe</td>
             <td>Dermatology</td>
             <td>
