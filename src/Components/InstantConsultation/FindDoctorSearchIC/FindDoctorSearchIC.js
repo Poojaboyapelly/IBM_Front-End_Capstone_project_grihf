@@ -22,7 +22,7 @@ const FindDoctorSearchIC = () => {
   const handleDoctorSelect = (speciality) => {
     setSearchDoctor(speciality);
     setDoctorResultHidden(true);
-    navigate(`/instant-consultation?speciality=${speciality}`);
+    navigate(`/InstantConsultation?speciality=${speciality}`);
     window.location.reload();
   };
 
