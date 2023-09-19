@@ -14,7 +14,7 @@ When finished it will be evaluated by Coursera as the Capstone project of the IB
 
 andre1melo
 
-Project Link: [https://github.com/andre1melo/grihf-frontend_capstone_starter_code](https://github.com/andre1melo/grihf-frontend_capstone_starter_code)
+Project Link: [https://github.com/andre1melo/grihf-frontend_capstone](https://github.com/andre1melo/grihf-frontend_capstone)
 
 
 
