@@ -36,7 +36,7 @@ passport.deserializeUser(function (id, cb) {
     cb(null, id);
 });
 
-// Route 1: Registering A New User: POST: http://localhost:8181/api/auth/register. No Login Required
+// Route 1: Registering A New User: POST: http://localhost:8000/api/auth/register. No Login Required
 router.post('/register',[
     body('email', "Please Enter a Vaild Email").isEmail(),
     body('name', "Username should be at least 4 characters.").isLength({ min: 4 }),
